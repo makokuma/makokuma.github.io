@@ -1,1 +1,109 @@
+:root {
+  --text-color: #1f2933;
+  --sub-text-color: #52606d;
+  --accent-color: #176b87;
+  --background-color: #ffffff;
+  --section-color: #f5f7fa;
+}
 
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  color: var(--text-color);
+  background: var(--background-color);
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    "Noto Sans JP",
+    sans-serif;
+  line-height: 1.8;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  background: rgba(255, 255, 255, 0.95);
+  border-bottom: 1px solid #e4e7eb;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 16px 24px;
+}
+
+nav a {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: var(--accent-color);
+}
+
+main {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+section {
+  padding: 72px 0;
+}
+
+.hero {
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero h1 {
+  margin-bottom: 8px;
+  font-size: clamp(2.5rem, 8vw, 5rem);
+  line-height: 1.1;
+}
+
+.hero p {
+  color: var(--sub-text-color);
+  font-size: 1.2rem;
+}
+
+h2 {
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--accent-color);
+}
+
+a {
+  color: var(--accent-color);
+}
+
+footer {
+  padding: 32px;
+  color: var(--sub-text-color);
+  text-align: center;
+  background: var(--section-color);
+}
+
+@media (max-width: 600px) {
+  nav {
+    gap: 12px;
+    overflow-x: auto;
+    justify-content: flex-start;
+  }
+
+  section {
+    padding: 48px 0;
+  }
+}
